@@ -54,7 +54,7 @@ router.delete("/delete/:id", (req, res) => {
 );
 
 router.put("/update/:id", (req, res) => {
-  let user = users.find(user => user.id == req.params.id);
+  let user = users.find(user => user._id == req.params.id);
   user.izena = req.body.izena;
   user.abizena = req.body.abizena;
   user.email = req.body.email;
